@@ -1,6 +1,18 @@
 const menu = document.querySelector('.menu');
 const links = document.querySelector('.links');
 const strategicForm = document.querySelector('#strategicForm');
+const strategicDistributionCard = document.querySelector('.ways .strategic:nth-child(2)');
+const submitButton = strategicForm.querySelector('.formSubmit');
+
+const distributionLead = document.createElement('p');
+distributionLead.className = 'distributionLead';
+distributionLead.textContent = '適合擁有大量企業客戶或垂直產業資源的策略夥伴，透過規模化授權與市場合作，共同建立長期 SaaS 成長。';
+strategicDistributionCard.querySelector('.modelTags').before(distributionLead);
+
+const confidentialNote = document.createElement('p');
+confidentialNote.className = 'confidentialNote';
+confidentialNote.innerHTML = 'Your inquiry will be handled confidentially by the WorkLink team.<br>您的策略合作洽詢將由 WorkLink 團隊以保密方式處理。';
+submitButton.after(confidentialNote);
 
 menu.addEventListener('click', () => links.classList.toggle('open'));
 
