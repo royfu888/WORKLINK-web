@@ -15,12 +15,13 @@ strategicForm.addEventListener('submit', (event) => {
 	}
 
 	const data = new FormData(strategicForm);
-	const subject = `WorkLink Strategic Conversation - ${data.get('direction')}`;
+	const subject = `[Strategic Partnership] ${data.get('direction')} - ${data.get('company')}`;
 	const body = [
 		`公司名稱：${data.get('company')}`,
 		`姓名：${data.get('name')}`,
 		`職稱：${data.get('title')}`,
 		`企業 Email：${data.get('email')}`,
+		`公司網站：${data.get('website') || '未提供'}`,
 		`合作方向：${data.get('direction')}`,
 		`簡短訊息：${data.get('message')}`
 	].join('\n');
